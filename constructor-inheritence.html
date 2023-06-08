@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Constructor Inheritence | JavaScript OOP</title>
+  </head>
+  <body>
+    <h1>Constructor Inheritence</h1>
+
+    <script>
+      function shortName(firstName) {
+        this.firstName = firstName;
+        this.sayHello = function (name) {
+          console.info(`Hi ${name} My Name Is ${firstName}`);
+        };
+      }
+
+      function manager(firstName, lastName) {
+        this.lastName = lastName;
+        shortName.call(this, firstName);
+      }
+
+      const agung = new manager('Agung', 'Harist');
+      agung.sayHello('Lasbi');
+
+      console.log(agung);
+    </script>
+  </body>
+</html>

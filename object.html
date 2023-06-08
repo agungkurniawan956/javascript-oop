@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object</title>
+  </head>
+  <body>
+    <h1>Object | JavaScript OOP</h1>
+    <script>
+      function FullName(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.sayHello = function (gues) {
+          console.info(`Hello ${gues}, Nama Saya ${this.firstName}`);
+        };
+      }
+
+      // use parameter
+      const agung = new FullName('Agung', 'Kurniawan');
+      // agung.firstName = 'Agung';
+      // agung.lastName = 'Kurniawan';
+      agung.sayHello('Harist');
+
+      // without parameter
+      const kurniawan = new FullName();
+      kurniawan.firstName = 'Kurniawan';
+      kurniawan.lastName = 'Agung';
+      kurniawan.sayHello('Lasbi');
+
+      console.log(agung);
+      console.log(kurniawan);
+    </script>
+  </body>
+</html>
