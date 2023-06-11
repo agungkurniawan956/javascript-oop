@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class Method | JavaScript OOP</title>
+  </head>
+  <body>
+    <h1>Class Method</h1>
+
+    <script>
+      class Person {
+        constructor(name) {
+          this.name = name;
+
+          // Tidak di sarankan
+          // this.sayHello = function (name) {
+          //   console.info(`Hello ${name} My Name Is ${this.name}`);
+          // };
+        }
+        // disarankan
+        sayHello(name) {
+          console.info(`Hello ${name} My Name Is ${this.name}`);
+        }
+      }
+
+      const agung = new Person('Agung');
+      console.log(agung);
+      agung.sayHello('Kurniawan');
+    </script>
+  </body>
+</html>
