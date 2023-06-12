@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class Super Constructor | JavaScript OOP</title>
+  </head>
+  <body>
+    <h1>Class Super Constructor | JavaScript OOP</h1>
+    <script>
+      class Employee {
+        constructor(firstName) {
+          this.firstName = firstName;
+        }
+
+        sayHello(name) {
+          console.info(`Hello ${name}, My Name is Employee ${this.firstName}`);
+        }
+      }
+
+      // masih error
+      class Manager extends Employee {
+        constructor(firstName, lastName) {
+          super(firstName);
+          this.lastName = lastName;
+        }
+        sayHello(name) {
+          console.info(
+            `Hello ${name}, My Name is Manager ${this.firstName} ${this.lastName} `
+          );
+        }
+      }
+
+      const Agung = new Employee('Agung');
+      Agung.sayHello('Harist');
+
+      const Kurniawan = new Manager('Kurniawan');
+      Kurniawan.sayHello('Lasbi');
+
+      console.info(Kurniawan);
+      console.info(Agung);
+    </script>
+  </body>
+</html>
