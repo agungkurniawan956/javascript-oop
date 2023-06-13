@@ -26,7 +26,7 @@
         }
         sayHello(name) {
           console.info(
-            `Hello ${name}, My Name is Manager ${this.firstName} ${this.lastName} `
+            `Hello ${name}, My Name is Manager ${this.firstName} ${this.lastName}`
           );
         }
       }
@@ -34,7 +34,7 @@
       const Agung = new Employee('Agung');
       Agung.sayHello('Harist');
 
-      const Kurniawan = new Manager('Kurniawan');
+      const Kurniawan = new Manager('Agung', 'Kurniawan');
       Kurniawan.sayHello('Lasbi');
 
       console.info(Kurniawan);
