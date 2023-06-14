@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class Getter Setter | JavaScript OOP</title>
+  </head>
+  <body>
+    <h1>Class Getter and Setter | JavaScript OOP</h1>
+    <script>
+      class Person {
+        constructor(firstName, lastName) {
+          this.firstName = firstName;
+          this.lastName = lastName;
+        }
+
+        get fullName() {
+          return `${this.firstName} ${this.lastName}`;
+        }
+
+        set fullName(value) {
+          const result = value.split(' ');
+          this.firstName = result[0];
+          this.lastName = result[1];
+        }
+      }
+
+      const agung = new Person('Agung', 'Kurniawan');
+      console.info(agung);
+      console.info(agung.fullName);
+
+      agung.fullName = 'Harist Maulana';
+      document.writeln(agung.fullName);
+    </script>
+  </body>
+</html>
