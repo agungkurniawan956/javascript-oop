@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class Public Field | JavaScript OOP</title>
+  </head>
+  <body>
+    <h1>Class Public Field | Javascript OOP</h1>
+    <script>
+      class Customer {
+        firstName;
+        lastName;
+        balance = 0;
+        constructor(firstName, lastName) {
+          this.firstName = firstName;
+          this.lastName = lastName;
+        }
+        sayHello(name) {
+          console.info(`Hello ${name} My Name is ${this.firstName}`);
+        }
+      }
+
+      const agung = new Customer('Agung', 'Kurniawan');
+      console.info(agung);
+      agung.sayHello('Harist');
+    </script>
+  </body>
+</html>
