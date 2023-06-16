@@ -7,5 +7,34 @@
   </head>
   <body>
     <h1>Class Private Field | JavaScript OOP</h1>
+    <script>
+      class Counter {
+        #counter = 0;
+
+        increment() {
+          this.#counter++;
+        }
+
+        decrement() {
+          this.#counter--;
+        }
+
+        get() {
+          return this.#counter;
+        }
+      }
+
+      const count = new Counter();
+
+      count.increment();
+      count.increment();
+      count.increment();
+      count.increment();
+      count.increment();
+
+      console.info(count.get());
+
+      console.info(count);
+    </script>
   </body>
 </html>
