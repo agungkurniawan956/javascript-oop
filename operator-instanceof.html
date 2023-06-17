@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Operator Instanceof | Javascript OOP</title>
+  </head>
+  <body>
+    <h1>Operator Instanceof | Javascript OOP</h1>
+    <script>
+      class Employee {}
+
+      class Manager extends Employee {}
+
+      const agung = new Employee();
+      const kurniawan = new Manager();
+
+      console.info(typeof agung);
+      console.info(typeof kurniawan);
+
+      console.info(agung instanceof Employee);
+      console.info(agung instanceof Manager);
+      console.info(kurniawan instanceof Employee);
+      console.info(kurniawan instanceof Manager);
+    </script>
+  </body>
+</html>
