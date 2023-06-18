@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Static Method | Javascript OOP</title>
+  </head>
+  <body>
+    <h1>Error | Javascript OOP</h1>
+    <script>
+      class MathUtil {
+        static sum(...numbers) {
+          if (numbers.length == 0) {
+            throw new Error('Nilai pada parameter tidak boleh 0');
+          }
+          let total = 0;
+          for (const number of numbers) {
+            total += number;
+          }
+          return total;
+        }
+      }
+
+      console.info(MathUtil.sum());
+      console.info('Agung');
+
+      const count = MathUtil.sum(1, 1, 1, 1, 1, 1);
+      console.info(count);
+    </script>
+  </body>
+</html>
