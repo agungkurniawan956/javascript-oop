@@ -9,6 +9,44 @@
   <body>
     <h1>Object | JavaScript OOP</h1>
     <script>
+      // let a = 9;
+      // console.log(window.a);
+      // membuat object
+      // cara 1 function declaration
+      function hello() {
+        console.info(this);
+        console.info('Hello - function declaration');
+      }
+      this.hello();
+
+      // cara 2 - object literal
+      let obj = { a: 9, nama: 'Agung' };
+      obj.sayHello = function () {
+        console.log(this);
+        console.info('Hello - literal');
+      };
+      // this mengembalikan object yang bersangkutan
+
+      obj.sayHello();
+
+      // cara 3 - object constructor
+      function Bio() {
+        console.log(this);
+        console.info('hallo - constructor');
+      }
+
+      let obj1 = new Bio();
+      let obj2 = new Bio();
+      // this mengembalikan object yang baru dibuat
+
+      // Object Literal
+      let name = {
+        nama: 'Agung',
+        umur: 25,
+        jenisKelamin: 'Laki-laki',
+      };
+
+      // Object Constructor
       function FullName(firstName, lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
