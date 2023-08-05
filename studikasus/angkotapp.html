@@ -16,8 +16,22 @@
         this.saldo = saldo;
 
         this.penumpangNaik = function (namaPenumpang) {
-          this.penumpang.push(namaPenumpang);
-          return this.penumpang;
+          if (this.penumpang.length == 0) {
+            this.penumpang.push(namaPenumpang);
+            return this.penumpang;
+          }
+          for (let i = 0; i < this.penumpang.length; i++) {
+            if (this.penumpang[i] == undefined) {
+              this.penumpang[i] == namaPenumpang;
+              return this.penumpang;
+            } else if (this.penumpang[i] == namaPenumpang) {
+              alert(`${namaPenumpang} sudah Ada Di dalam`);
+              return this.penumpang;
+            } else if (i == this.penumpang.length - 1) {
+              this.penumpang.push(namaPenumpang);
+              return this.penumpang;
+            }
+          }
         };
 
         this.penumpangTurun = function (namaPenumpang, bayar) {
