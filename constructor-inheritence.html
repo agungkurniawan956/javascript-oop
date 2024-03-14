@@ -13,7 +13,7 @@
       function shortName(firstName) {
         this.firstName = firstName;
         this.sayHello = function (name) {
-          console.info(`Hi ${name} My Name Is ${firstName}`);
+          console.info(`Hi ${name} My Name Is ${this.firstName} `);
         };
       }
 
@@ -22,7 +22,7 @@
         shortName.call(this, firstName);
       }
 
-      const agung = new manager('Agung', 'Harist');
+      const agung = new manager('Agung', 'Kurniawnan');
       agung.sayHello('Lasbi');
 
       console.log(agung);
