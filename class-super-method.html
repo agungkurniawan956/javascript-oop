@@ -12,17 +12,30 @@
         paint() {
           console.info('Paint Shape');
         }
+
+        iniMethod() {
+          document.writeln(
+            'Ini di panggil menggunakan method pada class Shape <br>'
+          );
+        }
       }
 
+      // gunakan kata super untuk mengambil method pada class di atasnya
       class Circle extends Shape {
         paint() {
           super.paint();
+          super.iniMethod();
           console.info('Circle Paint');
         }
       }
 
       const circle = new Circle();
       circle.paint();
+
+      const shape = new Shape();
+      shape.iniMethod();
+
+      console.info(circle);
     </script>
   </body>
 </html>

@@ -7,21 +7,34 @@
   </head>
   <body>
     <h1>Operator Instanceof | Javascript OOP</h1>
+    <p>
+      Fungsi dari instanceof untuk mengecek apakah object tersebut dari class
+      tertentu, hasil dari instanceof akan bernilai boolean.
+    </p>
+    <p>Instanceof juga dapat di gunakan pada class inheritance</p>
     <script>
-      class Employee {}
+      class Student {}
 
-      class Manager extends Employee {}
+      class Teacher {}
 
-      const agung = new Employee();
-      const kurniawan = new Manager();
+      const sarwan = new Teacher();
+      const wildan = new Student();
 
-      console.info(typeof agung);
-      console.info(typeof kurniawan);
+      console.info(typeof sarwan);
+      console.log(typeof wildan);
 
-      console.info(agung instanceof Employee);
-      console.info(agung instanceof Manager);
-      console.info(kurniawan instanceof Employee);
-      console.info(kurniawan instanceof Manager);
+      console.info(sarwan instanceof Student); // false
+      console.log(sarwan instanceof Teacher); // true
+
+      console.info(wildan instanceof Student); // true
+      console.log(wildan instanceof Teacher); // false
+
+      // jika di gunakan pada class inheritance
+      class Kurikulum extends Teacher {}
+
+      const agung = new Kurikulum();
+      console.log(agung instanceof Kurikulum); //true
+      console.log(agung instanceof Teacher); // true
     </script>
   </body>
 </html>

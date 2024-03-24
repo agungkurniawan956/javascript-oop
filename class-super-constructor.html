@@ -18,14 +18,17 @@
         }
       }
 
-      // masih error
+      // ketika kita ingin menmbahkan constructor pada child maka kita wajib menggunakan super atau akan error
       class Manager extends Employee {
         constructor(firstName, lastName) {
           super(firstName);
           this.lastName = lastName;
         }
         sayHello(name) {
-          console.info(
+          document.writeln(
+            `Hello ${name}, My Name is Manager ${this.firstName} ${this.lastName}`
+          );
+          console.log(
             `Hello ${name}, My Name is Manager ${this.firstName} ${this.lastName}`
           );
         }
@@ -33,6 +36,7 @@
 
       const Agung = new Employee('Agung');
       Agung.sayHello('Harist');
+      // document.writeln(Agung.sayHello('Harist'));
 
       const Kurniawan = new Manager('Agung', 'Kurniawan');
       Kurniawan.sayHello('Lasbi');

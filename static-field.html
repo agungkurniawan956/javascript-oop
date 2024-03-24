@@ -8,14 +8,28 @@
   <body>
     <h1>Static Field | Javascript OOP</h1>
     <script>
+      // without static
+      class WithoutStatic {
+        judul = 'Belajar Javascript OOP';
+        versi = 1.0;
+        sumber = 'Programmer Zaman Now';
+      }
+
+      const without = new WithoutStatic();
+      console.info(without);
+      console.log(without.judul);
+
+      // With Static
       class Configuration {
         static name = 'Belajar Javascript OOP';
-        static version = 1.5;
-        static teacher = 'Progremming Zaman Now';
+        static version = 2.0;
+        static teacher = 'Programmer Zaman Now';
       }
 
       const config = new Configuration();
       console.info(config);
+      console.log(Configuration.name);
+      console.warn(config.name); // undefined
     </script>
   </body>
 </html>

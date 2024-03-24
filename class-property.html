@@ -11,12 +11,19 @@
     <script>
       class Person {
         constructor(name) {
-          this.name = name;
+          this.name = name; // menambahkan property di dalam
         }
       }
 
       const nama = new Person('Agung');
+
+      nama.lastName = 'Kurniawan'; // jika menambahkan property di luar
+
       console.log(nama.name);
+      console.log(nama.lastName);
+
+      console.log(nama.name + ' ' + nama.lastName);
+      console.info(`${nama.name} ${nama.lastName}`);
       console.info(nama);
     </script>
   </body>

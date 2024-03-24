@@ -7,6 +7,7 @@
   </head>
   <body>
     <h1>Class Public Field | Javascript OOP</h1>
+
     <script>
       class Customer {
         firstName;
@@ -17,7 +18,9 @@
           this.lastName = lastName;
         }
         sayHello(name) {
-          console.info(`Hello ${name} My Name is ${this.firstName}`);
+          document.writeln(
+            `Hello ${name} My Name is ${this.firstName} ${this.lastName}`
+          );
         }
       }
 

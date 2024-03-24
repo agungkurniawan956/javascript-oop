@@ -3,11 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Static Method | Javascript OOP</title>
+    <title>Error Handling | Javascript OOP</title>
   </head>
   <body>
     <h1>Error | Javascript OOP</h1>
     <script>
+      // untuk error handling kita dapat menggunakan try dan catch agar kode tidak berhenti
       class MathUtil {
         static sum(...numbers) {
           if (numbers.length == 0) {
@@ -20,8 +21,12 @@
           return total;
         }
       }
+      // aktifkan code dibawah ini untuk melihat perbedaan
 
-      console.info('Agung');
+      // const number = new MathUtil.sum();
+      // console.log(number);
+
+      // contoh menggunakan try catch matikan kode diatas untuk melihat perbedaan
       try {
         console.info(MathUtil.sum());
       } catch (error) {
@@ -29,10 +34,11 @@
       } finally {
         console.info('Program Selesai');
       }
+      console.info('Agung');
 
       console.info('Akan Tetap lanjut');
 
-      // jika tidak ingin menggunakan catch
+      // jika tidak ingin menggunakan catch kita bisa langsung menggunakan finally
       class Counter {
         #counter = 1;
         next() {
